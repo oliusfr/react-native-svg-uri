@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matiascba/react-native-svg-uri.git"
+    "url": "git+https://github.com/oliusfr/react-native-svg-uri.git"
   },
   "keywords": [
     "react-native",
@@ -17,7 +17,7 @@
     "uri",
     "http"
   ],
-  "author": "Matias Cortes",
+  "author": "Louis Cheminant",
   "license": "ISC",
   "dependencies": {
     "xmldom": "^0.1.22"
