@@ -336,7 +336,7 @@ class SvgUri extends Component {
   inspectNode(node) {
     // Only process accepted elements
     if (!ACCEPTED_SVG_ELEMENTS.includes(node.nodeName)) {
-      return <View />;
+      return <View key={`${node.nodeName}-${index}`} />;
     }
 
     // Process the xml node
@@ -390,8 +390,15 @@ class SvgUri extends Component {
 
       return <View style={this.props.style}>{rootSVG}</View>;
     } catch (e) {
-      console.error("ERROR SVG", e);
-      return null;
+      return (
+        <View style={this.props.style}>
+          <Image
+            style={{ aspectRatio: 1, height: 50 }}
+            resizeMode="contain"
+            source={this.props.sourceIfFail}
+          />
+        </View>
+      );
     }
   }
 }
